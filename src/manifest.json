@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Waiving Xray Vision demo",
+  "version": "version will be mapped from package.json",
+
+  "short_name": "Waiving Xray Vision",
+  "description": "Waiving Xray Vision demo",
+
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:5000/*"
+      ],
+      "js": ["js/main.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
